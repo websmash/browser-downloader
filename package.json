@@ -1,0 +1,19 @@
+{
+  "name": "@websmash/browser-downloader",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/websmash/browser-downloader.git",
+  "author": "el-davo <david.ahern26@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha -r ts-node/register './lib/**/*.spec.ts*'",
+    "test:watch": "npm test -- --watch",
+    "lint": "tslint lib/**/*.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "build": "tsc",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  }
+}

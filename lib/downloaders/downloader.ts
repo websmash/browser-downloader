@@ -21,7 +21,6 @@ export class Downloader {
         const stream = createWriteStream(`${this.downloadPath}${sep}${filename}`);
 
         return new Promise((resolve, reject) => {
-            console.log(url);
             stream.on('finish', () => resolve(`${this.downloadPath}${sep}${filename}`));
             stream.on('error', (err) => reject(err));
 

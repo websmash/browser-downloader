@@ -12,7 +12,7 @@ import {sep} from 'path';
 
 describe('Downloader', () => {
 
-    let emitter = new EventEmitter();
+    const emitter = new EventEmitter();
     let superagentManagerGetStub: SinonStub;
     let createWriteStreamStub: SinonStub;
     let mockManagerChromium: MockManager<chromium.Chromium>;
@@ -33,7 +33,7 @@ describe('Downloader', () => {
 
     describe('linux', () => {
 
-        it('should downloadUrl correct file for chromium', async () => {
+        it('should downloadUrl correct file for chromium', async() => {
             mockManagerChromium.mock('downloadUrl', Promise.resolve('/path/to/chromium'));
 
             const downloader = new Downloader(OS.LINUX, BROWSERS.CHROMIUM, '12', '/path/to');
@@ -46,7 +46,7 @@ describe('Downloader', () => {
 
     describe('win64', () => {
 
-        it('should downloadUrl correct file for chromium', async () => {
+        it('should downloadUrl correct file for chromium', async() => {
             mockManagerChromium.mock('downloadUrl', Promise.resolve('/path/to/chromium'));
 
             const downloader = new Downloader(OS.WIN64, BROWSERS.CHROMIUM, '12', '/path/to');
@@ -59,7 +59,7 @@ describe('Downloader', () => {
 
     describe('win32', () => {
 
-        it('should downloadUrl correct file for chromium', async () => {
+        it('should downloadUrl correct file for chromium', async() => {
             mockManagerChromium.mock('downloadUrl', Promise.resolve('/path/to/chromium'));
 
             const downloader = new Downloader(OS.WIN32, BROWSERS.CHROMIUM, '12', '/path/to');
@@ -72,7 +72,7 @@ describe('Downloader', () => {
 
     describe('MAC', () => {
 
-        it('should downloadUrl correct file for chromium', async () => {
+        it('should downloadUrl correct file for chromium', async() => {
             mockManagerChromium.mock('downloadUrl', Promise.resolve('/path/to/chromium'));
 
             const downloader = new Downloader(OS.MAC, BROWSERS.CHROMIUM, '12', '/path/to');

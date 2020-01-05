@@ -1,3 +1,3 @@
-import {Downloader} from './downloaders/downloader';
+import {Orchestrator} from './orchestrator';
 
-export const BrowserDownloader = Downloader;
+export const BrowserDownloader = Orchestrator;

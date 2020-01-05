@@ -20,7 +20,8 @@
     ],
     "types": [
       "mocha",
-      "chai"
+      "chai",
+      "node"
     ]
   },
   "exclude": [

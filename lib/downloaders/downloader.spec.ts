@@ -1,5 +1,4 @@
 import {ImportMock, MockManager} from 'ts-mock-imports';
-import {Downloader} from './downloader';
 import {OS} from '../os/os.enum';
 import {BROWSERS} from './browser.enum';
 import * as chromium from './browsers/chromium';
@@ -9,6 +8,7 @@ import {expect} from 'chai';
 import {SinonStub, spy} from 'sinon';
 import {EventEmitter} from 'events';
 import {sep} from 'path';
+import {Downloader} from "./downloader";
 
 describe('Downloader', () => {
 
@@ -33,7 +33,7 @@ describe('Downloader', () => {
 
     describe('linux', () => {
 
-        it('should downloadUrl correct file for chromium', async() => {
+        it('should downloadUrl correct file for chromium', async () => {
             mockManagerChromium.mock('downloadUrl', Promise.resolve('/path/to/chromium'));
 
             const downloader = new Downloader(OS.LINUX, BROWSERS.CHROMIUM, '12', '/path/to');
@@ -46,7 +46,7 @@ describe('Downloader', () => {
 
     describe('win64', () => {
 
-        it('should downloadUrl correct file for chromium', async() => {
+        it('should downloadUrl correct file for chromium', async () => {
             mockManagerChromium.mock('downloadUrl', Promise.resolve('/path/to/chromium'));
 
             const downloader = new Downloader(OS.WIN64, BROWSERS.CHROMIUM, '12', '/path/to');
@@ -59,7 +59,7 @@ describe('Downloader', () => {
 
     describe('win32', () => {
 
-        it('should downloadUrl correct file for chromium', async() => {
+        it('should downloadUrl correct file for chromium', async () => {
             mockManagerChromium.mock('downloadUrl', Promise.resolve('/path/to/chromium'));
 
             const downloader = new Downloader(OS.WIN32, BROWSERS.CHROMIUM, '12', '/path/to');
@@ -72,7 +72,7 @@ describe('Downloader', () => {
 
     describe('MAC', () => {
 
-        it('should downloadUrl correct file for chromium', async() => {
+        it('should downloadUrl correct file for chromium', async () => {
             mockManagerChromium.mock('downloadUrl', Promise.resolve('/path/to/chromium'));
 
             const downloader = new Downloader(OS.MAC, BROWSERS.CHROMIUM, '12', '/path/to');

@@ -1,4 +1,4 @@
-import {OS} from '../os/os.enum';
+import {OS} from 'os/os.enum';
 import {BROWSERS} from './browser.enum';
 import {Chromium} from './browsers/chromium';
 import {get} from 'superagent';
